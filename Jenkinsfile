@@ -12,7 +12,11 @@ pipeline {
         stage('run backend') {
             steps {
                 echo 'executing gradle'
-                sh 'gradle -v'
+                sh 'wget https://services.gradle.org/distributions/gradle-5.0-bin.zip -P /tmp'
+                sh 'sudo unzip -d /opt/gradle /tmp/gradle-5.0-bin.zip'
+                sh 'export GRADLE_HOME=/opt/gradle/gradle-5.0'
+                sh 'export PATH=${GRADLE_HOME}/bin:${PATH}'
+                sh   'gradle -v'
              }
          }
      }
