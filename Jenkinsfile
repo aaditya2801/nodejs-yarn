@@ -15,8 +15,8 @@ pipeline {
                 withGradle() {
                   sh './gradlew -v'
                  }
-              }
-           }
-        }
-    }
+             }
+         }
+     }
 }
+
