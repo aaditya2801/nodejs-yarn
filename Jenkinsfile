@@ -16,7 +16,7 @@ pipeline {
                 sh 'sudo unzip -d /opt/gradle /tmp/gradle-5.0-bin.zip'
                 sh 'export GRADLE_HOME=/opt/gradle/gradle-5.0'
                 sh 'export PATH=${GRADLE_HOME}/bin:${PATH}'
-                sh   'gradle -v'
+                sh '/opt/gradle/gradle-5.0/bin/gradle -v'
              }
          }
      }
