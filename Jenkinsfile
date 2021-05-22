@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'executing gradle'
                 withGradle() {
-                  sh './gradlew -v'
+                  sh 'gradle wrapper --gradle-version 2.13'
                  }
              }
          }
