@@ -12,7 +12,7 @@ pipeline {
         stage('run backend') {
             steps {
                 echo 'executing gradle'
-                sh 'wget https://services.gradle.org/distributions/gradle-5.0-bin.zip gradle'
+                sh 'wget https://services.gradle.org/distributions/gradle-5.0-bin.zip'
                 sh 'unzip gradle-5.0-bin.zip'
 	        sh 'mv gradle-5.0 gradle'
                 sh 'export GRADLE_HOME=/home/ec2-user/gradle'
