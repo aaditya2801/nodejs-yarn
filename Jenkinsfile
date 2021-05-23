@@ -15,7 +15,7 @@ pipeline {
                 sh 'wget https://services.gradle.org/distributions/gradle-5.0-bin.zip'
                 sh 'unzip gradle-5.0-bin.zip'
 	        sh 'mv gradle-5.0 gradle'
-                sh 'export GRADLE_HOME=/home/ec2-user/gradle'
+                sh 'export GRADLE_HOME=./gradle'
                 sh 'export PATH=${GRADLE_HOME}/bin:${PATH}'
                 sh 'gradle -v'
                }
