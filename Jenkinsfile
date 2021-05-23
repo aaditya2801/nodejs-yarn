@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'executing gradle'
                 sh 'wget https://services.gradle.org/distributions/gradle-6.2-bin.zip -P /tmp'
-                sh 'sudo unzip -d /opt/gradle /tmp/gradle-6.2-bin.zip'
+                sh 'unzip -d /opt/gradle /tmp/gradle-6.2-bin.zip'
                 sh 'export GRADLE_HOME=/opt/gradle/gradle-6.2'
                 sh 'export PATH=${GRADLE_HOME}/bin:${PATH}'
                 sh '/opt/gradle/gradle-5.0/bin/gradle -v'
