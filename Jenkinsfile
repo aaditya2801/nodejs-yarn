@@ -12,7 +12,7 @@ pipeline {
         stage('run backend') {
             steps {
                 echo 'executing gradle'
-                sh 'if [ ! -d "gradle" ] ; then git clone https://github.com/gradle/gradle-site-plugin.git gradle; fi'
+                sh "echo 'if [ ! -d "gradle" ] ; then git clone https://github.com/gradle/gradle-site-plugin.git gradle; fi' > script.sh"
             }
          }
      }
