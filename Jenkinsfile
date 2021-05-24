@@ -17,8 +17,7 @@ pipeline {
                 sh 'echo fi >> script.sh'
                 sh 'chmod +x script.sh'
                 sh './script.sh'
-                sh 'alias gradle=./gradle/gradlew'
-                sh 'gradle -v'
+                sh './gradle/gradlew -v'
             }
          }
      }
