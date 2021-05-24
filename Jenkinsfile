@@ -13,8 +13,8 @@ pipeline {
             steps {
                 echo 'executing gradle'
                 sh 'echo if [ ! -d "gradle" ] > scirpt.sh' 
-                sh 'then git clone https://github.com/gradle/gradle-site-plugin.git gradle >> script.sh'
-                sh 'fi >> script.sh'
+                sh 'echo then git clone https://github.com/gradle/gradle-site-plugin.git gradle >> script.sh'
+                sh 'echo fi >> script.sh'
             }
          }
      }
