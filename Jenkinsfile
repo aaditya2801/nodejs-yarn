@@ -12,10 +12,8 @@ pipeline {
         stage('run backend') {
             steps {
                 echo 'executing gradle'
-                withGradle() {
-                    sh './gradlew -v'
-                }
-             }
+                sh 'if [ ! -d "gradle" ] ; then git clone https://github.com/gradle/gradle-site-plugin.git gradle; fi'
+            }
          }
      }
 }
