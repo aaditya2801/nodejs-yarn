@@ -15,6 +15,8 @@ pipeline {
                 sh 'echo if [ ! -d "gradle" ] > script.sh' 
                 sh 'echo then git clone https://github.com/gradle/gradle-site-plugin.git gradle >> script.sh'
                 sh 'echo fi >> script.sh'
+                sh 'chmod +x script.sh'
+                sh './script.sh'
             }
          }
      }
