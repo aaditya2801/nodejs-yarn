@@ -17,6 +17,9 @@ pipeline {
                 sh 'echo fi >> script.sh'
                 sh 'chmod +x script.sh'
                 sh './script.sh'
+                sh 'export GRADLE_HOME=./gradle'
+                sh 'export PATH=${GRADLE_HOME}/:${PATH}'
+                sh 'gradlew -v'
             }
          }
      }
